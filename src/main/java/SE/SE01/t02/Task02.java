@@ -1,15 +1,14 @@
 package SE.SE01.t02;
 
 public class Task02 {
-    public static void main(String[] args) {
-        double e = 0.01;
+    public static void an(double epsilon) {
         double an = 1;
-        int i = 0;
-        while (an > e) {
+        int i = 1;
+        while (an >= epsilon) {
             an = 1 / Math.pow((i + 1), 2);
-            i = i + 1;
-            System.out.println(an);
+            System.out.format("a[%d]= %f,%n",i,an);
+            i++;
         }
-        System.out.println("i= " + i);
+        System.out.format("искомый номер последовательности: %d", i-1);
     }
 }
